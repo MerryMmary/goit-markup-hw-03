@@ -109,6 +109,8 @@ img {
   letter-spacing: 0.03em;
 
   margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 
 .logo-accent-color {
@@ -152,9 +154,6 @@ img {
 }
 
 .navigation-list-item {
-  padding-top: 32px;
-  padding-bottom: 32px;
-  /* margin-right: 50px; НИЖЧЕ!!! */
 }
 
 .navigation-list-item:not(:last-child) {
@@ -167,6 +166,8 @@ img {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .navigation-list-link:hover,
@@ -191,7 +192,7 @@ img {
   color: var(--accent-color);
 }
 
-.contacts-list-item {
+.contacts-list-item a {
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -207,8 +208,8 @@ img {
 .hero {
   background-color: #2f303a;
   text-align: center;
-  padding-top: var(--section-pt);
-  padding-bottom: var(--section-pb);
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .hero-title {
@@ -254,7 +255,7 @@ img {
 }
 
 .advantages-list-item {
-  width: calc((100%-90px) / 4);
+  width: calc((100% - 90px) / 4);
 }
 
 .advantages-list-item:not(:last-child) {
@@ -272,7 +273,14 @@ img {
 
 .services-list {
   display: flex;
-  justify-content: space-between;
+}
+
+.services-list-item {
+  width: 370px;
+}
+
+.services-list-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 /* ---- END ABOUT ---- */
@@ -302,24 +310,28 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
-
-  margin-bottom: 30px;
 }
 
 .team-list {
   display: flex;
-  justify-content: space-between;
+}
+
+.team-list-item-textwrapper {
+  padding: 30px 16px 30px 16px;
+  background-color: var(--contrast-color);
 }
 
 .team-list-item {
+  flex-basis: calc((100%-90px) / 4);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.14),
     0 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0 0 4px 4px;
 }
 
-.team-list-item img {
-  margin-bottom: 30px;
+.team-list-item:not(:last-child) {
+  margin-right: 30px;
 }
+
 /* ---- END TEAM ---- */
 
 /* ---- CONTACTS ---- */
@@ -396,6 +408,8 @@ a.logo-dark-theme {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--main-text-color);
+
+  margin-bottom: 4px;
 }
 
 .portfolio-list-subtitle + p {
@@ -411,8 +425,9 @@ a.logo-dark-theme {
   flex-wrap: wrap;
 }
 
+/*  !!! Correct formula spacing !!! */
 .portfolio-list-item {
-  width: 370px;
+  flex-basis: calc((100% - 60px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
 }
@@ -421,9 +436,14 @@ a.logo-dark-theme {
   margin-right: 0px;
 }
 
-.portfolio-list-subtitle {
-  margin-top: 20px;
-  margin-bottom: 4px;
+.portfolio-list-item:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
+
+.portfolio-list-item-text {
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+  border-top: transparent;
 }
 
 /* ---- END GALLERY ---- */
